@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<title> {% block title%}MYMDB{% endblock %}</title>
+</head>
+<style>
+.mymdb-masthead{
+    background-color: #EEEEEE;
+     margin-bottom: 1em;
+    }
+</style>
+<body>
+<div class="mymdb-masthead">
+    <div class="container">
+        <nav class="nav">
+            <div class="navbar-brand">
+                MYMDB
+            </div>
+            <a class="nav-link" href="{% url 'core:MovieList' %}">
+                Movies
+            </a>
+        </nav>
+
+    </div>
+</div>
+<div class = "container">
+    <div class ="row">
+        <div class="col-md-8 mymdb-main">
+            {% block main%}{% endblock %}
+        </div>
+        <div class="col-md-3 offset-sm-1 mymdb-sidebar">
+            {% block sidebar%}{% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
