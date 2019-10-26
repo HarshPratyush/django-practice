@@ -9,7 +9,7 @@ class MovieList(ListView):
 
 
 class MovieDetail(DetailView):
-    queryset = (Movie.object.all_with_related_person())
+    queryset = (Movie.objects.all_with_related_person())
 
 
 class PersonDetail(DetailView):

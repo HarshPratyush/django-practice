@@ -34,7 +34,7 @@ class Movie(models.Model):
     actors = models.ManyToManyField(to='Person', through='Role', related_name='acting_credits',
                                     blank=True)
 
-    object = MovieManager()
+    objects = MovieManager()
 
     class Meta:
         ordering = ('-year', 'title')
